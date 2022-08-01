@@ -1,0 +1,76 @@
+<html>
+                     
+<head>
+     <!--support many language-->
+     <meta charset="utf-8"> 
+     <!--For Responsive-->
+     <meta name="viewport" content="width=device-width, initial-scale=1">  <!--this is mobile view-->
+     <meta name="author" content="Khalid Mossad" />
+     <meta name="description" content="CRUD System" />
+     <meta name="keywords" content="html,css,js,jquery,bootstrap" />
+     <link rel="icon" href="img/favicon.png">
+     <title>CRUD</title>
+      <!--Css Links-->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+    
+
+</head>
+ 
+<body>
+    <div class="w-75 mx-auto my-4">
+
+        <div class="mb-3">
+            <label for="productName">Product Name :</label>
+            <input class="form-control my-2" type="text" id="productName">
+            <span id="nameValid" class="small text-muted"></span>
+        </div>
+        <div class="mb-3">
+            <label for="productPrice">Product Price :</label>
+            <input class="form-control my-2" type="number" id="productPrice">
+            <span id="priceValid"  class="small text-muted"> </span>
+        </div>
+
+        <div class="mb-3">
+            <label for="productCategory">Product Category :</label>
+            <input class="form-control my-2" type="text" id="productCategory">
+            <span id="categoryValid" class="small text-muted"> </span>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="productDesc"> Description :</label>
+            <textarea class="form-control my-2" type="text" id="productDesc"></textarea>
+            <span id="productDesc" class="small text-muted"> </span>
+        </div>
+        <button disabled id="submitBtn" class="btn btn-primary">add product</button>
+    </div>
+
+    <div class="w-75 mx-auto p-3">
+        <label for="" class="p-1">Search by productName</label>
+        <input id="search" onkeyup="searchProduct(this.value)" class="form-control" type="text">
+    </div>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <th>Index</th>
+                <th>productName</th>
+                <th>productPrice</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
